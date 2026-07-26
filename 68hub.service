@@ -1,0 +1,23 @@
+[Unit]
+Description=68HUB - OpenCode Go Usage Dashboard
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/68hub
+ExecStart=/usr/bin/node /opt/68hub/dist-server/server/index.js
+Restart=on-failure
+RestartSec=10
+Environment=NODE_ENV=production
+Environment=68BACKEND_DATA=/opt/68hub/data
+Environment=68BACKEND_LISTEN_HOST=0.0.0.0
+Environment=68BACKEND_LISTEN_PORT=8788
+
+# Security
+NoNewPrivileges=true
+ProtectSystem=full
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

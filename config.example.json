@@ -1,0 +1,10 @@
+{
+  "opencode_accounts": [
+    {
+      "name": "My Account",
+      "workspace_id": "Default",
+      "auth_cookie": "auth=your_auth_cookie_here"
+    }
+  ],
+  "ollama_accounts": []
+}

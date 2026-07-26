@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  68hub:
+    build: .
+    container_name: 68hub
+    restart: unless-stopped
+    ports:
+      - "8788:8788"
+    volumes:
+      - 68hub-data:/app/data
+      # Optional: mount a config file for automatic account import on first run
+      # - ./config.json:/app/config.json
+    environment:
+      - 68BACKEND_DATA=/app/data
+      - 68BACKEND_LISTEN_HOST=0.0.0.0
+      - 68BACKEND_LISTEN_PORT=8788
+
+volumes:
+  68hub-data:

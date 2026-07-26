@@ -1,0 +1,50 @@
+{
+  "name": "68hub",
+  "version": "1.1.1",
+  "description": "OpenCode Go 用量统计面板 (Web Server Edition)",
+  "main": "dist-server/server/index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev:vite": "vite",
+    "dev:server": "tsx watch server/index.ts",
+    "dev": "concurrently -k \"pnpm dev:vite\" \"pnpm dev:server\"",
+    "build:vite": "vite build",
+    "build:server": "tsc --project tsconfig.server.json",
+    "build": "pnpm build:vite && pnpm build:server",
+    "start": "node dist-server/server/index.js",
+    "preview": "pnpm build && pnpm start"
+  },
+  "keywords": [
+    "opencode",
+    "go",
+    "dashboard",
+    "hono",
+    "react"
+  ],
+  "dependencies": {
+    "@hono/node-server": "^2.0.10",
+    "@tailwindcss/vite": "^4.3.2",
+    "better-sqlite3": "^12.11.1",
+    "daisyui": "^5.6.17",
+    "hono": "^4.12.30",
+    "i18next": "^26.3.6",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-i18next": "^17.0.10",
+    "react-router-dom": "^7.18.1",
+    "recharts": "^3.9.2",
+    "tailwindcss": "^4.3.2",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^20.14.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.0",
+    "concurrently": "^8.2.2",
+    "tsx": "^4.7.0",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.12"
+  }
+}
