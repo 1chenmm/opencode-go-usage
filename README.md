@@ -124,9 +124,9 @@ sudo systemctl enable --now 68hub
 
 ## ⭐ Star History
 
-<a href="https://star-history.com/#1chenmm/68hub-web&Date">
-  <img src="https://api.star-history.com/svg?repos=1chenmm/68hub-web&type=Date" alt="Star History" width="600">
-</a>
+[![Star History](https://img.shields.io/github/stars/1chenmm/68hub-web?style=social)](https://star-history.com/#1chenmm/68hub-web&Date)
+
+当仓库获得足够多的 star 后，[Star History 图表](https://star-history.com/#1chenmm/68hub-web&Date)将自动显示趋势曲线。
 
 ## 致谢
 
