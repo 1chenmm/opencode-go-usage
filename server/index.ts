@@ -161,8 +161,8 @@ const listener = getRequestListener(app.fetch);
 const server = createServer(listener);
 
 server.listen(LISTEN_PORT, LISTEN_HOST, () => {
-  console.log(`\n  🚀 68HUB Web Server`);
-  console.log(`  ─────────────────────`);
+  console.log(`\n  🚀 OpenCodeGo Usage Dashboard`);
+  console.log(`  ───────────────────────────────────`);
   console.log(`  📊 API:      http://${LISTEN_HOST === '0.0.0.0' ? 'localhost' : LISTEN_HOST}:${LISTEN_PORT}/api`);
   console.log(`  🖥️  Dashboard: http://${LISTEN_HOST === '0.0.0.0' ? 'localhost' : LISTEN_HOST}:${LISTEN_PORT}`);
   console.log(`  📁 Data:     ${DATA_DIR}`);

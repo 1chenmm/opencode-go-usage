@@ -1,7 +1,7 @@
 {
-  "name": "68hub",
-  "version": "1.1.1",
-  "description": "OpenCode Go 用量统计面板 (Web Server Edition)",
+  "name": "opencode-go-usage",
+  "version": "1.0.0",
+  "description": "OpenCode Go 用量统计面板 —— Web Server Edition",
   "main": "dist-server/server/index.js",
   "license": "MIT",
   "scripts": {

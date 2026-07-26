@@ -1,18 +1,18 @@
-# 68HUB Web Server Edition
+# OpenCode Go Usage Dashboard
 
 **OpenCode Go 用量统计面板 —— 纯 Web 部署版本**
 
 > 基于 [68hub (evanfu0110/68hub)](https://github.com/evanfu0110/68hub) 改造，移除 Electron 桌面端依赖，改为 Linux Web 服务部署。
 
 <p align="center">
-  <a href="https://github.com/1chenmm/68hub-web/stargazers">
-    <img src="https://img.shields.io/github/stars/1chenmm/68hub-web?style=for-the-badge&logo=github&color=ffdd57" alt="Stars">
+  <a href="https://github.com/1chenmm/opencode-go-usage/stargazers">
+    <img src="https://img.shields.io/github/stars/1chenmm/opencode-go-usage?style=for-the-badge&logo=github&color=ffdd57" alt="Stars">
   </a>
-  <a href="https://github.com/1chenmm/68hub-web/forks">
-    <img src="https://img.shields.io/github/forks/1chenmm/68hub-web?style=for-the-badge&logo=github&color=58a6ff" alt="Forks">
+  <a href="https://github.com/1chenmm/opencode-go-usage/forks">
+    <img src="https://img.shields.io/github/forks/1chenmm/opencode-go-usage?style=for-the-badge&logo=github&color=58a6ff" alt="Forks">
   </a>
-  <a href="https://github.com/1chenmm/68hub-web/blob/master/LICENSE">
-    <img src="https://img.shields.io/github/license/1chenmm/68hub-web?style=for-the-badge" alt="License">
+  <a href="https://github.com/1chenmm/opencode-go-usage/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/1chenmm/opencode-go-usage?style=for-the-badge" alt="License">
   </a>
 </p>
 
@@ -36,13 +36,11 @@
 
 ```bash
 # 克隆仓库
-git clone https://github.com/1chenmm/68hub-web.git
-cd 68hub-web
+git clone https://github.com/1chenmm/opencode-go-usage.git
+cd opencode-go-usage
 
 # 构建并启动
 docker compose up -d --build
-
-# 访问 http://localhost:8788
 ```
 
 首次启动后，在"设置"页面添加你的 OpenCode Go 账户（填入 auth cookie），然后点击"同步"开始拉取数据。
@@ -77,14 +75,14 @@ pnpm dev
 
 ```bash
 # 部署到指定目录
-sudo mkdir -p /opt/68hub
-sudo cp -r * /opt/68hub/
-cd /opt/68hub && pnpm install && pnpm build
+sudo mkdir -p /opt/opencode-go-usage
+sudo cp -r * /opt/opencode-go-usage/
+cd /opt/opencode-go-usage && pnpm install && pnpm build
 
 # 安装服务
-sudo cp 68hub.service /etc/systemd/system/
+sudo cp opencode-go-usage.service /etc/systemd/system/
 sudo systemctl daemon-reload
-sudo systemctl enable --now 68hub
+sudo systemctl enable --now opencode-go-usage
 ```
 
 ## 配置
@@ -124,9 +122,9 @@ sudo systemctl enable --now 68hub
 
 ## ⭐ Star History
 
-[![Star History](https://img.shields.io/github/stars/1chenmm/68hub-web?style=social)](https://star-history.com/#1chenmm/68hub-web&Date)
+[![Star History](https://img.shields.io/github/stars/1chenmm/opencode-go-usage?style=social)](https://star-history.com/#1chenmm/opencode-go-usage&Date)
 
-当仓库获得足够多的 star 后，[Star History 图表](https://star-history.com/#1chenmm/68hub-web&Date)将自动显示趋势曲线。
+当仓库获得足够多的 star 后，[Star History 图表](https://star-history.com/#1chenmm/opencode-go-usage&Date)将自动显示趋势曲线。
 
 ## 致谢
 

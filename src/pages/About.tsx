@@ -24,7 +24,7 @@ export function About() {
   useEffect(() => {
     (async () => {
       try {
-        const res = await fetch('https://api.github.com/repos/1chenmm/68hub-web/tags');
+        const res = await fetch('https://api.github.com/repos/1chenmm/opencode-go-usage/tags');
         const data = await res.json();
         if (Array.isArray(data) && data.length > 0) {
           const tag = data[0].name.replace(/^v/, '');
@@ -64,7 +64,7 @@ export function About() {
         </p>
       </div>
 
-      <button className="btn btn-primary w-full" onClick={() => openLink('https://github.com/1chenmm/68hub-web')}>
+      <button className="btn btn-primary w-full" onClick={() => openLink('https://github.com/1chenmm/opencode-go-usage')}>
         <svg className="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         {t('about.viewOnGitHub')}
       </button>

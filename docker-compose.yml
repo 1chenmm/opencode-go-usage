@@ -1,14 +1,14 @@
 version: '3.8'
 
 services:
-  68hub:
+  opencode-go-usage:
     build: .
-    container_name: 68hub
+    container_name: opencode-go-usage
     restart: unless-stopped
     ports:
       - "8788:8788"
     volumes:
-      - 68hub-data:/app/data
+      - opencode-go-usage-data:/app/data
       # Optional: mount a config file for automatic account import on first run
       # - ./config.json:/app/config.json
     environment:
@@ -17,4 +17,4 @@ services:
       - 68BACKEND_LISTEN_PORT=8788
 
 volumes:
-  68hub-data:
+  opencode-go-usage-data:
