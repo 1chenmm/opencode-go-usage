@@ -1,8 +1,8 @@
 # OpenCode Go Usage Dashboard
 
-**OpenCode Go 用量统计面板 —— 纯 Web 部署版本**
+**OpenCode Go 用量统计面板**
 
-> 基于 [68hub (evanfu0110/68hub)](https://github.com/evanfu0110/68hub) 改造，移除 Electron 桌面端依赖，改为 Linux Web 服务部署。
+基于 [68hub (evanfu0110/68hub)](https://github.com/evanfu0110/68hub) 改造，移除 Electron 桌面端依赖，改为 Linux Web 服务部署。
 
 <p align="center">
   <a href="https://github.com/1chenmm/opencode-go-usage/stargazers">
@@ -18,6 +18,63 @@
 
 ---
 
+## 🖥️ 安装方式（按平台）
+
+### 🪟 Windows / 🍎 macOS 用户
+
+请直接使用原版 **68hub 桌面应用**（功能一致，无需自己搭服务器）：
+
+| 平台 | 下载 |
+|------|------|
+| **Windows (x64)** | [68HUB Setup 1.1.1.exe](https://github.com/evanfu0110/68hub/releases) (NSIS 安装包) |
+| **macOS (ARM64, Apple Silicon)** | [68HUB 1.1.1.dmg](https://github.com/evanfu0110/68hub/releases) (DMG 镜像) |
+
+> 原版项目地址：[evanfu0110/68hub](https://github.com/evanfu0110/68hub)
+
+### 🐧 Linux 用户 → 使用此 Web 版本
+
+#### 方式一：Docker 部署（推荐）
+
+```bash
+git clone https://github.com/1chenmm/opencode-go-usage.git
+cd opencode-go-usage
+docker compose up -d --build
+```
+
+首次启动后，在"设置"页面添加你的 OpenCode Go 账户（填入 auth cookie），然后点击"同步"开始拉取数据。
+
+#### 方式二：直接部署（需要 Node.js 20+）
+
+```bash
+pnpm install
+pnpm build
+pnpm start
+
+# 或指定监听地址和端口
+68BACKEND_LISTEN_HOST=0.0.0.0 68BACKEND_LISTEN_PORT=8788 pnpm start
+```
+
+#### 方式三：开发模式
+
+```bash
+pnpm install
+pnpm dev      # 启动 Vite 热重载 + 后端热重载
+```
+
+#### Systemd 服务
+
+```bash
+sudo mkdir -p /opt/opencode-go-usage
+sudo cp -r * /opt/opencode-go-usage/
+cd /opt/opencode-go-usage && pnpm install && pnpm build
+
+sudo cp opencode-go-usage.service /etc/systemd/system/
+sudo systemctl daemon-reload
+sudo systemctl enable --now opencode-go-usage
+```
+
+---
+
 ## 功能
 
 | 页面 | 说明 |
@@ -29,61 +86,6 @@
 | ⚙️ **设置** | 多账户管理（新增/测试/同步/回填/删除），自动同步开关与间隔设置 |
 | 🌐 **中英双语** | 可切换中文/English |
 | 🌙 **暗色模式** | 浅色/深色/跟随系统 |
-
-## 快速开始
-
-### 方式一：Docker 部署（推荐）
-
-```bash
-# 克隆仓库
-git clone https://github.com/1chenmm/opencode-go-usage.git
-cd opencode-go-usage
-
-# 构建并启动
-docker compose up -d --build
-```
-
-首次启动后，在"设置"页面添加你的 OpenCode Go 账户（填入 auth cookie），然后点击"同步"开始拉取数据。
-
-### 方式二：直接部署（需要 Node.js 20+）
-
-```bash
-# 安装依赖
-pnpm install
-
-# 构建前端 + 编译后端
-pnpm build
-
-# 启动服务
-pnpm start
-
-# 或指定监听地址和端口
-68BACKEND_LISTEN_HOST=0.0.0.0 68BACKEND_LISTEN_PORT=8788 pnpm start
-```
-
-### 方式三：开发模式
-
-```bash
-# 安装依赖
-pnpm install
-
-# 启动前端 Vite + 后端（热重载）
-pnpm dev
-```
-
-## Systemd 服务
-
-```bash
-# 部署到指定目录
-sudo mkdir -p /opt/opencode-go-usage
-sudo cp -r * /opt/opencode-go-usage/
-cd /opt/opencode-go-usage && pnpm install && pnpm build
-
-# 安装服务
-sudo cp opencode-go-usage.service /etc/systemd/system/
-sudo systemctl daemon-reload
-sudo systemctl enable --now opencode-go-usage
-```
 
 ## 配置
 
@@ -128,7 +130,7 @@ sudo systemctl enable --now opencode-go-usage
 
 ## 致谢
 
-- [68hub](https://github.com/evanfu0110/68hub) — 桌面版原始项目
+- [68hub](https://github.com/evanfu0110/68hub) — 桌面版原始项目（Windows + macOS 桌面端）
 - [OpenCode](https://opencode.ai) — API 提供商
 
 ## License
