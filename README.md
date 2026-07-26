@@ -4,6 +4,26 @@
 
 > 基于 [68hub (evanfu0110/68hub)](https://github.com/evanfu0110/68hub) 改造，移除 Electron 桌面端依赖，改为 Linux Web 服务部署。
 
+<p align="center">
+  <a href="https://github.com/1chenmm/68hub-web/stargazers">
+    <img src="https://img.shields.io/github/stars/1chenmm/68hub-web?style=for-the-badge&logo=github&color=ffdd57" alt="Stars">
+  </a>
+  <a href="https://github.com/1chenmm/68hub-web/forks">
+    <img src="https://img.shields.io/github/forks/1chenmm/68hub-web?style=for-the-badge&logo=github&color=58a6ff" alt="Forks">
+  </a>
+  <a href="https://github.com/1chenmm/68hub-web/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/1chenmm/68hub-web?style=for-the-badge" alt="License">
+  </a>
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=1chenmm/68hub-web&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=1chenmm/68hub-web&type=Date" />
+    <img alt="Star History" src="https://api.star-history.com/svg?repos=1chenmm/68hub-web&type=Date" width="600" />
+  </picture>
+</p>
+
 ---
 
 ## 功能
