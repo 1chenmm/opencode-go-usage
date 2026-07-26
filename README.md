@@ -16,14 +16,6 @@
   </a>
 </p>
 
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=1chenmm/68hub-web&type=Date&theme=dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=1chenmm/68hub-web&type=Date" />
-    <img alt="Star History" src="https://api.star-history.com/svg?repos=1chenmm/68hub-web&type=Date" width="600" />
-  </picture>
-</p>
-
 ---
 
 ## 功能
@@ -129,6 +121,16 @@ sudo systemctl enable --now 68hub
 | React 18 | Hono + better-sqlite3 | Docker / systemd |
 | Vite 5 + Tailwind 4 | TypeScript | Node.js 20+ |
 | daisyUI 5 + Recharts | zod | Linux |
+
+## ⭐ Star History
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=1chenmm/68hub-web&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=1chenmm/68hub-web&type=Date" />
+    <img alt="Star History" src="https://api.star-history.com/svg?repos=1chenmm/68hub-web&type=Date" width="600" />
+  </picture>
+</p>
 
 ## 致谢
 
