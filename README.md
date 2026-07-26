@@ -124,13 +124,9 @@ sudo systemctl enable --now 68hub
 
 ## ⭐ Star History
 
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=1chenmm/68hub-web&type=Date&theme=dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=1chenmm/68hub-web&type=Date" />
-    <img alt="Star History" src="https://api.star-history.com/svg?repos=1chenmm/68hub-web&type=Date" width="600" />
-  </picture>
-</p>
+<a href="https://star-history.com/#1chenmm/68hub-web&Date">
+  <img src="https://api.star-history.com/svg?repos=1chenmm/68hub-web&type=Date" alt="Star History" width="600">
+</a>
 
 ## 致谢
 
